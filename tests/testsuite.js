@@ -12,7 +12,8 @@
 	var testModules = [
 		"spec/controller/IndexControllerTest.js",
 		"spec/model/ValidatorTest.js",
-		"spec/model/FormatterTest.js"
+		"spec/model/FormatterTest.js",
+		"spec/model/ChangeCalculatorTest.js"
 	];
 	
     // Resolve testModules and start the Test Runner.

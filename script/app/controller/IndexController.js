@@ -1,9 +1,10 @@
-define(["model/Validator", "model/Formatter"], function(Validator, Formatter){
+define(["model/Validator", "model/Formatter", "model/ChangeCalculator"], function(Validator, Formatter, ChangeCalculator){
 	
 	// Constructor
 	function IndexController(){ 
 		this._validator = new Validator();
 		this._formatter = new Formatter();
+		this._changeCalculator = new ChangeCalculator();
 	}
 	
 	IndexController.prototype = {			
@@ -13,9 +14,9 @@ define(["model/Validator", "model/Formatter"], function(Validator, Formatter){
 				
 				if(!this._validator.validateInput(input)){
 					return "Input is not valid";
-				}
-				
-				var formatInput = this._formatter.formatInput(input);
+				}				
+				var formattedInput = this._formatter.formatInput(input);
+				var solution = this._changeCalculator.getChange(formattedInput);
 			}			
 	};
 	
