@@ -9,7 +9,7 @@ define(["model/Validator", "model/Formatter"], function(Validator, Formatter){
 	IndexController.prototype = {			
 			
 			showSolution: function(input) {
-				var input = new String(input);
+				var input = new String(input).replace(/^\s+|\s+$/g,'');
 				
 				if(!this._validator.validateInput(input)){
 					return "Input is not valid";

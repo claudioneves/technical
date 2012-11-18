@@ -2,6 +2,8 @@ define(["model/Formatter", "../../helper/TestInput.js"], function (Formatter, Te
 	
 	var formatter = new Formatter();
 	
+	var testInput = new TestInput();
+	
 	// Define the QUnit module and lifecycle.
 	QUnit.module("model/Formatter", { 
 		setup: function () {
@@ -11,19 +13,20 @@ define(["model/Formatter", "../../helper/TestInput.js"], function (Formatter, Te
 	});
 	
 	QUnit.test("An input should return a formatted value", function(){
-		var input = ' ';
-		var value;
+		var validInputs = testInput.getValidInputs();
+		var result = true;
 		
-		var test = new Array({'input': 4, 'value': 4.0}, {'input': '001.41p', 'value': 1});
-		
-		console.log(test[1]['value']);
-		
-		
-		strictEqual(false, formatter.formatInput(input), "An input should return a formatted value");
+		for(var i = 0; i < validInputs.length; i++) {
+			var input = new String(validInputs[i]['input']);			
+			var expectedValue = validInputs[i]['value'];
+			
+			if(expectedValue !== formatter.formatInput(input)) {
+				console.log(input);
+				result = false;
+				break;
+			}
+		}
+
+		strictEqual(true, result, "An input should return a formatted value");
 	});
-	
-	
-	
-	
-	
 });
