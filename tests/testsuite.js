@@ -11,7 +11,8 @@
 	// A list of all QUnit test Modules. Included as relative paths to skip baseUrl
 	var testModules = [
 		"spec/controller/IndexControllerTest.js",
-		"spec/model/ValidatorTest.js"
+		"spec/model/ValidatorTest.js",
+		"spec/model/FormatterTest.js"
 	];
 	
     // Resolve testModules and start the Test Runner.

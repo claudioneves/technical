@@ -11,8 +11,14 @@ define(["controller/IndexController"], function (IndexController) {
 	});
 
 	QUnit.test("An invalid input should generate an 'invalid input message'", function(){
-		var input = ' ';
+		var input = " ";
 		strictEqual("Input is not valid", controller.showSolution(input), "An invalid input shows an 'invalid input' message");
+	});
+	
+	QUnit.test("A valid input should generate a valid solution", function(){
+		var input = "£1.257422457p";
+		var solution = controller.showSolution(input);
+		equal("object", typeof solution);
 	});
 	
 	

@@ -19,12 +19,11 @@ define(["model/Validator", "../../helper/TestInput.js"], function (Validator, Te
 	
 	QUnit.test("An invalid input should return validation false", function(){
 		var invalidInputs = testInput.getInvalidInputs();
-		var result = false;
-		//console.log(invalidInputs);		
+		var result = false;		
 		for(var i = 0; i < invalidInputs.length; i++) {
 			var input = invalidInputs[i];			
 			if(true === validator.validateInput(input)) {
-				console.log(input);
+				//console.log(input);
 				result = true;
 				break;
 			}
@@ -35,12 +34,11 @@ define(["model/Validator", "../../helper/TestInput.js"], function (Validator, Te
 	
 	QUnit.test("A valid input should return validation true", function(){
 		var validInputs = testInput.getValidInputs();
-		var result = true;
-		//console.log(validInputs);		
+		var result = true;		
 		for(var i = 0; i < validInputs.length; i++) {
-			var input = validInputs[i];			
+			var input = validInputs[i]['input'];			
 			if(false === validator.validateInput(input)) {
-				console.log(input);
+				//console.log(input);
 				result = false;
 				break;
 			}
@@ -48,6 +46,4 @@ define(["model/Validator", "../../helper/TestInput.js"], function (Validator, Te
 		
 		strictEqual(true, result, "A valid input returns validation true");
 	});
-	
-	
 });

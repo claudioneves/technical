@@ -6,7 +6,7 @@ define(function() {
 	
 	Validator.prototype = {
 		validateInput: function(input) {
-
+			
 			if( !(this._validInputRegex).test(input) ) {
 				return false;
 			} else {
