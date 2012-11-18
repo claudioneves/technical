@@ -1,0 +1,4 @@
+technical
+=========
+
+A Javascript exercise
