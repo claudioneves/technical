@@ -9,7 +9,7 @@ define(["model/Validator"], function(Validator){
 			
 			showSolution: function(input) {
 				if(!this._validator.validateInput(input)){
-					return "Empty input is not valid";
+					return "Input is not valid";
 				}
 			}			
 	};

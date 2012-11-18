@@ -10,9 +10,9 @@ define(["controller/IndexController"], function (IndexController) {
 		}
 	});
 
-	QUnit.test("An empty input should generate a 'empty input message'", function(){
+	QUnit.test("An invalid input should generate an 'invalid input message'", function(){
 		var input = ' ';
-		strictEqual("Empty input is not valid", controller.showSolution(input), "An empty input returns validation false");
+		strictEqual("Input is not valid", controller.showSolution(input), "An invalid input shows an 'invalid input' message");
 	});
 	
 	

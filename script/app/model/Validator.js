@@ -1,12 +1,14 @@
 define(function() {
 	
-	function Validator() {}
+	function Validator() {
+		this._validInputRegex = /^(£?)(\d+)(\.?)(\d*)[p]?$/;
+	}
 	
 	Validator.prototype = {
 		validateInput: function(input) {
 
-			if( (/^\s*$/).test(input) ) {
-				return false;	
+			if( !(this._validInputRegex).test(input) ) {
+				return false;
 			} else {
 				return true;
 			}
