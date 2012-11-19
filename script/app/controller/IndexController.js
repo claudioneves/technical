@@ -17,6 +17,7 @@ define(["model/Validator", "model/Formatter", "model/ChangeCalculator"], functio
 				}				
 				var formattedInput = this._formatter.formatInput(input);
 				var solution = this._changeCalculator.getChange(formattedInput);
+				return solution;
 			}			
 	};
 	
