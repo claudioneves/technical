@@ -1,21 +1,23 @@
-
-define(function(){	
+define(["model/Denomination", "model/Change"], function(Denomination, Change){
 	function ChangeCalculator(){
+		this._change = new Change();
+		this._denomination = new Denomination();
 	}
 	
 	ChangeCalculator.prototype = {
 			'getChange': function(inputValue) {
 				var change = new Object;
-				var coins = new Array(200, 100, 50, 20, 2, 1);		    	
-		    	for (var i = 0; i < coins.length; i++) {		    		
-		    		var coin = coins[i];
-		    		var numberOfCoins = Math.floor(inputValue/coin);		    		
+				var denominations = this._denomination.getDenominations();
+		    	for (var i = 0; i < denominations.length; i++) {		    		
+		    		var denominationLabel = denominations[i]['label'];
+		    		var denominationValue = denominations[i]['value'];
+		    		var numberOfCoins = Math.floor(inputValue/denominationValue);		    		
 		    		if(numberOfCoins > 0) {
-		    			inputValue = inputValue % coin;
+		    			inputValue = inputValue % denominationValue;
 		    		}
-		    		change[coin] = numberOfCoins;
+		    		this._change.addQuantity(denominationLabel, numberOfCoins);
 		    	}		    	
-		    	return change;
+		    	return this._change;
 			}
 	};
 	

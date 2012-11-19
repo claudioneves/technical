@@ -19,12 +19,12 @@ define(["model/ChangeCalculator", "../../helper/StubChange.js"], function(Change
 			
 			var change = changeCalculator.getChange(value);
 			
-			equal(solution['200'],	change['200'],	'Number of 2 pound coins should be correct');
-			equal(solution['100'],	change['100'],	'Number of 1 pound coins should be correct');
-			equal(solution['50'],	change['50'],	'Number of 50p coins should be correct');
-			equal(solution['20'],	change['20'],	'Number of 20p coins should be correct');
-			equal(solution['2'],	change['2'],	'Number of 2p coins should be correct');
-			equal(solution['1'],	change['1'],	'Number of 1p coins should be correct');
+			equal(solution['200'],	change.getCoinsOf2Pounds(),	'Number of 2 pound coins should be correct');
+			equal(solution['100'],	change.getCoinsOf1Pound(),	'Number of 1 pound coins should be correct');
+			equal(solution['50'],	change.getCoinsOf50pence(),	'Number of 50p coins should be correct');
+			equal(solution['20'],	change.getCoinsOf20pence(),	'Number of 20p coins should be correct');
+			equal(solution['2'],	change.getCoinsOf2pence(),	'Number of 2p coins should be correct');
+			equal(solution['1'],	change.getCoinsOf1pence(),	'Number of 1p coins should be correct');
 		}
 	});
 	
