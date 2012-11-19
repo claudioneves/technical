@@ -6,6 +6,9 @@
     // Configure RequireJS so it resolves relative module paths from the app folder
     require.config({
         baseUrl: "../script/app",
+        paths: {
+            vendor: '../vendor'
+        }
     });
 
 	// A list of all QUnit test Modules. Included as relative paths to skip baseUrl
