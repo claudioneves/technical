@@ -11,7 +11,6 @@ define(["model/Validator", "model/Formatter", "model/ChangeCalculator", "view/Ch
 	IndexController.prototype = {			
 			showSolution: function(input) {
 				var input = new String(input).replace(/^\s+|\s+$/g,'');
-				var errorMessage = "";
 				
 				if(!this._validator.validateInput(input)){
 					this._view = new ErrorView("Input is not valid");
@@ -21,7 +20,10 @@ define(["model/Validator", "model/Formatter", "model/ChangeCalculator", "view/Ch
 					this._view = new ChangeView(change);
 				}
 				this._view.render();
-			}			
+			},
+			getView: function() {
+				return this._view;
+			}
 	};
 	
 	return IndexController;

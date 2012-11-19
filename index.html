@@ -4,26 +4,36 @@
 <meta charset="UTF-8">
 <title>Technical test</title>
 <script src="script/require-jquery.js" data-main="script/application.js"></script>
+
+<script id="error" type="text/html">
+	<p>{{ message }}</p>
+</script>
+
+<script id="change" type="text/html">
+    <h2>Denominations</h2>
+	<p>The breakdown of denominations is:</p>
+    <p>£2 coin: {{ coinsOf2Pounds }}</p>
+    <p>£1 coin: {{ coinsOf1Pound }}</p>
+    <p>50p coin: {{ coinsOf50pence }}</p>
+    <p>20p coin: {{ coinsOf20pence }}</p>
+    <p>2p coin: {{ coinsOf2pence }}</p>
+    <p>1p coin: {{ coinsOf1pence }}</p>
+</script>
+
 </head>
 <body>
     <h1>Technical test</h1>
-    <form>
-        <input type="text" value="">    
+    
+    <p>A simple JavaScript application that given a number of pennies will calculate the minimum number of 
+    Sterling coins needed to make that amount.</p>
+    
+    <p>Eg. 123p = 1 x £1, 1 x 20p, 1 x 2p, 1 x 1p</p>
+    
+    <form method="post" action="/">
+    	<label for="valueToChange"> Value to convert:
+        	<input type="text" name="valueToChange" id="valueToChange" value="" autofocus="autofocus">
+        </label>
     </form>
     
-    <!-- Successfully submitted -->
-    <h2>Results</h2>
-    <p>£2 coin: number of coins</p>
-    <p>£1 coin: number of coins</p>
-    <p>50p coin: number of coins</p>
-    <p>20p coin: number of coins</p>
-    <p>2p coin: number of coins</p>
-    <p>1p coin: number of coins</p>
-    
-    <!-- Successfully submitted -->
-    
-    <!-- Error message -->
-    <p>Error message goes here</p>
-    <!-- Error message -->
 </body>
 </html>
