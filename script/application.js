@@ -8,7 +8,7 @@ require.config({
 define(["controller/IndexController", "jquery"], function(IndexController, $){
 	
 	$(document).ready(function() {
-		$('body').append('<div id="content"></div>');
+		$('#main').append('<div id="content"></div>');
 		
 		var controller = new IndexController();
 

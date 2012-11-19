@@ -6,34 +6,40 @@
 <script src="script/require-jquery.js" data-main="script/application.js"></script>
 
 <script id="error" type="text/html">
-	<p>{{ message }}</p>
+	<p id="errorMessage">{{ message }}</p>
 </script>
 
 <script id="change" type="text/html">
-    <h2>Denominations</h2>
-	<p>The breakdown of denominations is:</p>
-    <p>£2 coin: {{ coinsOf2Pounds }}</p>
-    <p>£1 coin: {{ coinsOf1Pound }}</p>
-    <p>50p coin: {{ coinsOf50pence }}</p>
-    <p>20p coin: {{ coinsOf20pence }}</p>
-    <p>2p coin: {{ coinsOf2pence }}</p>
-    <p>1p coin: {{ coinsOf1pence }}</p>
+    <div id="changeOutput">
+		<h2>Denominations</h2>
+		<p>The breakdown of denominations is:</p>
+    	<p>£2 coin: {{ coinsOf2Pounds }}</p>
+    	<p>£1 coin: {{ coinsOf1Pound }}</p>
+    	<p>50p coin: {{ coinsOf50pence }}</p>
+    	<p>20p coin: {{ coinsOf20pence }}</p>
+    	<p>2p coin: {{ coinsOf2pence }}</p>
+    	<p>1p coin: {{ coinsOf1pence }}</p>
+	</div>
 </script>
+
+<link rel="stylesheet" type="text/css" href="style/main.css">
 
 </head>
 <body>
-    <h1>Technical test</h1>
-    
-    <p>A simple JavaScript application that given a number of pennies will calculate the minimum number of 
-    Sterling coins needed to make that amount.</p>
-    
-    <p>Eg. 123p = 1 x £1, 1 x 20p, 1 x 2p, 1 x 1p</p>
-    
-    <form method="post" action="/">
-    	<label for="valueToChange"> Value to convert:
-        	<input type="text" name="valueToChange" id="valueToChange" value="" autofocus="autofocus">
-        </label>
-    </form>
+	<div id="main">
+	    <h1>Technical test</h1>
+	    
+	    <p>A simple JavaScript application that given a number of pennies will calculate the minimum number of 
+	    Sterling coins needed to make that amount.</p>
+	    
+	    <p>Eg. 123p = 1 x £1, 1 x 20p, 1 x 2p, 1 x 1p</p>
+	    
+	    <form method="post" action="/">
+	    	<label for="valueToChange"> Value to convert:
+	        	<input type="text" name="valueToChange" id="valueToChange" value="" autofocus="autofocus">
+	        </label>
+	    </form>
+	</div>
     
 </body>
 </html>
