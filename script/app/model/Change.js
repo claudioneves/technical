@@ -1,5 +1,6 @@
 define(function(){
 	
+	// Constructor
 	function Change(){
 		this._coinsOf2Pounds;
 		this._coinsOf1Pound;

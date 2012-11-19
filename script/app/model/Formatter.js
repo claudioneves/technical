@@ -3,6 +3,8 @@ define(function(){
 	function Formatter() {}
 	
 	Formatter.prototype = {
+		
+		// Formats input according to pre-defined RegExs
 		formatInput: function(input) {
 		
 			// If input is a single or double digit with or without trailing penny symbol
@@ -12,8 +14,8 @@ define(function(){
 			}
 			
 			// If input is any digit with or without a pound sign and with or without penny symbol
-			if( (/^(£?)(\d+)(\.?)(\d*)(p?)$/).test(input) ) {
-				input = input.replace(/^£/,'').replace(/p$/,'');
+			if( (/^(Â£?)(\d+)(\.?)(\d*)(p?)$/).test(input) ) {
+				input = input.replace(/^Â£/,'').replace(/p$/,'');
 				input = Number(input);
 				input = Math.round( input * Math.pow(10, 2) ) / Math.pow(10, 2);				
 				return input * 100;

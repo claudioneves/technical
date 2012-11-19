@@ -9,6 +9,7 @@ define(["model/Validator", "model/Formatter", "model/ChangeCalculator", "view/Ch
 	}
 	
 	IndexController.prototype = {			
+			// Processes input and initialises view
 			showSolution: function(input) {
 				var input = new String(input).replace(/^\s+|\s+$/g,'');
 				

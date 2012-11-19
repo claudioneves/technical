@@ -5,6 +5,7 @@ require.config({
     }
 });
 
+// Entry point of application
 define(["controller/IndexController", "jquery"], function(IndexController, $){
 	
 	$(document).ready(function() {

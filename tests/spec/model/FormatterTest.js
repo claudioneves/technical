@@ -21,6 +21,9 @@ define(["model/Formatter", "../../helper/TestInput.js"], function (Formatter, Te
 			var expectedValue = validInputs[i]['value'];
 			
 			if(expectedValue !== formatter.formatInput(input)) {
+				//console.log(input);
+				//console.log(expectedValue);
+				//console.log(formatter.formatInput(input));				
 				result = false;
 				break;
 			}

@@ -1,5 +1,6 @@
 define(function(){
 	
+	// Constructor
 	function Denomination() {
 		this._denominations = new Array(
 				{'label': '2Pounds', 'value': 200},

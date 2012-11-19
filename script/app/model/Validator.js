@@ -1,7 +1,8 @@
 define(function() {
 	
+	// Constructor
 	function Validator() {
-		this._validInputRegex = /^(£?)(\d+)(\.?)(\d*)[p]?$/;
+		this._validInputRegex = /^(Â£?)(\d+)(\.?)(\d*)[p]?$/;
 	}
 	
 	Validator.prototype = {
