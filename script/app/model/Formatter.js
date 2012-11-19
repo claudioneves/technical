@@ -3,7 +3,7 @@ define(function(){
 	function Formatter() {}
 	
 	Formatter.prototype = {
-		'formatInput': function(input) {
+		formatInput: function(input) {
 		
 			// If input is a single or double digit with or without trailing penny symbol
 			if( (/^(\d+)(p?)$/).test(input) ) {

@@ -5,7 +5,7 @@ define(["model/Denomination", "model/Change"], function(Denomination, Change){
 	}
 	
 	ChangeCalculator.prototype = {
-			'getChange': function(inputValue) {
+			getChange: function(inputValue) {
 				var change = new Object;
 				var denominations = this._denomination.getDenominations();
 		    	for (var i = 0; i < denominations.length; i++) {		    		

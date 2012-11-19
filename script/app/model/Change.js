@@ -10,27 +10,27 @@ define(function(){
 	}
 	
 	Change.prototype = {
-			'addQuantity': function(denominationLabel, numberOfCoins) {
+			addQuantity: function(denominationLabel, numberOfCoins) {
 				if( typeof this["_coinsOf" + denominationLabel] != null ) {
 					this["_coinsOf" + denominationLabel] = numberOfCoins;
 				}
 			},
-			'getCoinsOf2Pounds': function() {
+			getCoinsOf2Pounds: function() {
 				return this._coinsOf2Pounds;
 			},
-			'getCoinsOf1Pound': function() {
+			getCoinsOf1Pound: function() {
 				return this._coinsOf1Pound;
 			},
-			'getCoinsOf50pence': function() {
+			getCoinsOf50pence: function() {
 				return this._coinsOf50pence;
 			},
-			'getCoinsOf20pence': function() {
+			getCoinsOf20pence: function() {
 				return this._coinsOf20pence;
 			},
-			'getCoinsOf2pence': function() {
+			getCoinsOf2pence: function() {
 				return this._coinsOf2pence;
 			},
-			'getCoinsOf1pence': function() {
+			getCoinsOf1pence: function() {
 				return this._coinsOf1pence;
 			}
 	}

@@ -12,7 +12,7 @@ define(function(){
 	}
 	
 	Denomination.prototype = {
-			'getDenominations': function() {
+			getDenominations: function() {
 				return this._denominations;
 			}
 	}
