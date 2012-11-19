@@ -1,10 +1,11 @@
-define(["model/Validator", "model/Formatter", "model/ChangeCalculator"], function(Validator, Formatter, ChangeCalculator){
+define(["model/Validator", "model/Formatter", "model/ChangeCalculator", "view/IndexView"], function(Validator, Formatter, ChangeCalculator, IndexView){
 	
 	// Constructor
 	function IndexController(){ 
 		this._validator = new Validator();
 		this._formatter = new Formatter();
 		this._changeCalculator = new ChangeCalculator();
+		this._view = new IndexView();
 	}
 	
 	IndexController.prototype = {			
